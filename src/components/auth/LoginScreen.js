@@ -1,16 +1,16 @@
 import React from "react";
-
+import { Link } from "react-router-dom";
 export const LoginScreen = () => {
   return (
     <>
-      <h3>Login</h3>
+      <h3 className="auth__title">Login</h3>
       <form action="">
-        <input type="text" placeholder="email" name="email" />
-        <input type="password" placeholder="password" name="password" />
+        <input className="auth__input" type="text" placeholder="email" name="email" />
+        <input className="auth__input" type="password" placeholder="password" name="password" />
 
-        <button type="submit">Ingresar</button>
-        <hr />
-        <div>
+        <button className="btn btn-primary btn-block" type="submit">Ingresar</button>
+        
+        <div className="auth__social-networks">
           <p>Login with social networks!</p>
 
           <div className="google-btn">
@@ -26,6 +26,7 @@ export const LoginScreen = () => {
             </p>
           </div>
         </div>
+        <Link to="/auth/register">Registrarse</Link>
       </form>
     </>
   );
