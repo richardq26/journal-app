@@ -25,10 +25,11 @@
 
 .notes__title-input, .notes__textarea {
     border: none;
-
+    border-bottom: 1px solid black;
     &:focus{
         outline: none;
     }
+
 }
 
 .notes__title-input {
