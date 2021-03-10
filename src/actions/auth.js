@@ -11,8 +11,9 @@ export const login = (uid, displayName) => ({
 
 export const startGoogleLogin=()=>{
   return(dispatch) =>{
-    firebase.auth().signInWithPopup(googleAuthProvider).then(userCred =>{
-      console.log(userCred);
+      // Extraemos el user de lo que nos devuelve firebase
+     firebase.auth().signInWithPopup(googleAuthProvider).then(({user}) =>{
+      dispatch(login(user.uid, user.displayName))
     });
   }
 }

@@ -18,6 +18,7 @@ export const LoginScreen = () => {
   }
 
   const handleGoogleLogin=()=>{
+    // Está en el action auth.js
     dispatch(startGoogleLogin());
   }
 
